@@ -1,0 +1,5 @@
+I am writing my first game which is similar to popular "Frogger". I got some issues which I can't handle by myself.
+
+1. When jumping on the water - "game over water" log 2 times - should only one
+2. Doesn't jump on raft - should jump and be on raft
+3.

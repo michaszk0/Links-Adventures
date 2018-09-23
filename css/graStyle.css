@@ -1,0 +1,495 @@
+.container {
+  margin: 0 auto;
+  width: 550px;
+  height: 550px;
+  border: 3px solid black;
+  position: relative;
+}
+
+.line-0 {
+  background-color: green;
+  height: 50px;
+  width: 550px;
+  position: absolute;
+  bottom: 0px;
+}
+
+.line-1 {
+  height: 50px;
+  width: 550px;
+  position: absolute;
+  bottom: 50px;
+}
+
+.line-2 {
+  height: 50px;
+  width: 550px;
+  position: absolute;
+  bottom: 100px;
+}
+
+.line-3 {
+  height: 50px;
+  width: 550px;
+  position: absolute;
+  bottom: 150px;
+}
+
+.line-4 {
+  height: 50px;
+  width: 550px;
+  position: absolute;
+  bottom: 200px;
+}
+
+.line-5 {
+  height: 50px;
+  width: 550px;
+  position: absolute;
+  bottom: 250px;
+}
+
+.line-6 {
+  height: 50px;
+  width: 550px;
+  position: absolute;
+  bottom: 300px;
+}
+
+.line-7 {
+  height: 50px;
+  width: 550px;
+  position: absolute;
+  bottom: 350px;
+}
+
+.line-8 {
+  height: 50px;
+  width: 550px;
+  position: absolute;
+  bottom: 400px;
+}
+
+.line-9 {
+  height: 50px;
+  width: 550px;
+  position: absolute;
+  bottom: 450px;
+}
+
+.line-10 {
+  height: 50px;
+  width: 550px;
+  position: absolute;
+  bottom: 500px;
+}
+
+.player1 {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  z-index: 3;
+  background-image: url(../img/link.png);
+  background-repeat: no-repeat
+}
+
+.player2 {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  z-index: 3;
+  background-image: url(../img/link.png);
+  background-repeat: no-repeat
+}
+
+.tratwa_1-1 {
+  width: 50px;
+  height: 50px;
+  background-image: url(../img/raft.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+}
+
+.tratwa_1-2 {
+  width: 50px;
+  height: 50px;
+  background-image: url(../img/raft.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+}
+
+.tratwa_2-1 {
+  width: 50px;
+  height: 50px;
+  background-image: url(../img/raft.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+}
+
+.tratwa_2-2 {
+  width: 50px;
+  height: 50px;
+  background-image: url(../img/raft.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+}
+
+.tratwa_3-1 {
+  width: 50px;
+  height: 50px;
+  background-image: url(../img/raft.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+}
+
+.tratwa_3-2 {
+  width: 50px;
+  height: 50px;
+  background-image: url(../img/raft.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+}
+
+.tratwa_4-1 {
+  width: 50px;
+  height: 50px;
+  background-image: url(../img/raft.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+}
+
+.tratwa_4-2 {
+  width: 50px;
+  height: 50px;
+  background-image: url(../img/raft.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+}
+
+.tratwa_5-1 {
+  width: 50px;
+  height: 50px;
+  background-image: url(../img/raft.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+}
+
+.tratwa_5-2 {
+  width: 50px;
+  height: 50px;
+  background-image: url(../img/raft.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+}
+
+.tratwa_6-1 {
+  width: 50px;
+  height: 50px;
+  background-image: url(../img/raft.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+}
+
+.tratwa_6-2 {
+  width: 50px;
+  height: 50px;
+  background-image: url(../img/raft.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+}
+
+.tratwa_7-1 {
+  width: 50px;
+  height: 50px;
+  background-image: url(../img/raft.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+}
+
+.tratwa_7-2 {
+  width: 50px;
+  height: 50px;
+  background-image: url(../img/raft.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+}
+
+.tratwa_8-1 {
+  width: 50px;
+  height: 50px;
+  background-image: url(../img/raft.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+}
+
+.tratwa_8-2 {
+  width: 50px;
+  height: 50px;
+  background-image: url(../img/raft.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+}
+
+.spider {
+  width: 50px;
+  height: 50px;
+  background-image: url(../img/spider.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+}
+
+.trophie_1-1 {
+  width: 40px;
+  height: 40px;
+  background-image: url(../img/shield1.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+}
+
+.trophie_1-2 {
+  width: 40px;
+  height: 40px;
+  background-image: url(../img/sword1.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+}
+
+.trophie_1-3 {
+  width: 40px;
+  height: 40px;
+  background-image: url(../img/potion.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+}
+
+.trophie_1-4 {
+  width: 40px;
+  height: 40px;
+  background-image: url(../img/potion.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+}
+
+.chest1 {
+  width: 35px;
+  height: 35px;
+  background-image: url(../img/chest.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+}
+
+.chest2 {
+  width: 35px;
+  height: 35px;
+  background-image: url(../img/chest.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+}
+
+
+/* Table =========== */
+
+.tableContainer {
+  font-family: 'Cinzel Decorative', cursive;
+  border: 3px solid black;
+  width: 550px;
+  height: 60px;
+  margin: 10px auto;
+  padding: 5px;
+  background-image: url(../img/map.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.tableContainerTop {
+  display: flex;
+}
+
+.tableContainerDown {
+  display: flex;
+}
+
+.lifes {
+  font-size: 25px;
+  height: 40px;
+  width: 50%;
+}
+
+.lifes2 {
+  font-size: 25px;
+  height: 40px;
+  width: 50%;
+}
+
+.items {
+  width: 50%;
+}
+
+.items2 {
+  width: 50%;
+}
+
+.menuContainer {
+  font-family: 'Cinzel Decorative', cursive;
+  width: 450px;
+  height: 450px;
+  border: 3px solid black;
+  z-index: 30;
+  position: absolute;
+  left: 50px;
+  top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url(../img/map.jpg);
+  background-size: contain;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.gameTitle{
+  color: black;
+  font-size: 33px;
+  font-family: 'Cinzel Decorative', cursive;
+  margin-bottom: 60px;
+  font-weight: 600;
+}
+
+.buttonsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width:70%;
+}
+
+.menuButton {
+  margin: 10px auto;
+  backface-visibility: hidden;
+  position: relative;
+  cursor: pointer;
+  align-self: center;
+  white-space: nowrap;
+  background-image: url(../img/map.jpg);
+  background-size: contain;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border-radius: 2px;
+  border: 1px solid black;
+  border-width: 1px 1px 1px 1px;
+  padding: 12px 12px 12px 12px;
+  color: black;
+  font-size: 16px;
+  font-family: 'Cinzel Decorative', cursive;
+  font-weight: 900;
+  font-style: normal;
+  text-shadow: 0px -1px 0px rgba(0%, 0%, 0%, 0.4);
+  width: 150px;
+}
+
+.menuButton>div {
+  color: #999;
+  font-size: 10px;
+  font-family: 'Cinzel Decorative', cursive;
+  font-weight: initial;
+  font-style: normal;
+  text-align: center;
+  margin: 0px 0px 0px 0px
+}
+
+.menuButton>i {
+  font-size: 1em;
+  border-radius: 0px;
+  border: 0px solid transparent;
+  border-width: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+  position: static
+}
+
+.menuButton>.ld {
+  font-size: initial
+}
+
+.instructions {
+  width: 450px;
+  height: 450px;
+  border: 3px solid black;
+  z-index: 30;
+  position: absolute;
+  left: 50px;
+  top: 50px;
+  background-color: #AC813D;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.singleInstructions{
+  background-image: url(../img/map.jpg);
+  background-size: contain;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.multiInstructions{
+  background-image: url(../img/map.jpg);
+  background-size: contain;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.singleInstructionText{
+  text-align: justify;
+  font-weight: 600;
+  font-size:18px;
+  margin-bottom: 40px;
+  width:70%;
+  font-family: 'Cinzel Decorative', cursive;
+}
+
+.multiInstructionText{
+  text-align: justify;
+  font-weight: 600;
+  font-size:18px;
+  margin-bottom: 40px;
+  width:70%;
+  font-family: 'Cinzel Decorative', cursive;
+}
+
+.singlePlayBtn{
+  font-family: 'Cinzel Decorative', cursive;
+  text-align: center;
+}
+
+.multiPlayBtn{
+  font-family: 'Cinzel Decorative', cursive;
+  text-align: center;
+}
