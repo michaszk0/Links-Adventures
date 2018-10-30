@@ -1,3 +1,7 @@
+// Plik zawieta bardzo dużo kodu, analizowagnie go w takiej postaci jest bardzo uciążliwe.
+// Kod powinien zostać podzielony na mniejsze moduły. np player.js, monster.js, raft.js ,gameCore.js
+// Docelowo można go skleić w całość jak jest teraz za pomocą Grunta lub innego narzędzia
+
 $(function() {
 
   var container = $('.container');
@@ -87,13 +91,17 @@ $(function() {
 
     //Trophies class=============
     class Trophies {
+
       constructor(name, PosX, PosY, id) {
         this.name = name;
         this.PosX = PosX;
         this.PosY = PosY;
         this.id = id;
         this.initPosX = PosX;
-        this.initPosY = PosY
+        this.initPosY = PosY;
+        // this.el = $("<div class='" + name + "'>";
+        // this.itemSize = 50;
+        // this.setPosition()
       }
       hide() {
         $(this.name).hide();
@@ -106,9 +114,18 @@ $(function() {
         this.PosX = this.initPosX;
         this.PosY = this.initPosY;
       }
+      // setPosition() {
+      //      this.el.css('left', this.PosX * this.itemSize);
+      //      this.el.css('bottom', this.PosY * this.itemSize);
+      //      container.append(this.el);
+      //   }
+      }
     }
 
     var trophie_1 = new Trophies(".trophie_1-1", 1, 10, 1);
+    // Idealnie byłoby gdyby klasa Trophies zawierała uchwyt do elementu 'trophie_1-1',
+    // wtedy operowałbyś na jednym objekcie i nie musiałbyś odwoływać się do zmiennej trophie_1_1
+    // Dodatkowo mogłaby zawierać metodę "setPosition" która robiłaby to co robisz niżej (zrobiłem wyżej dla przykładu)
     var trophie_1_1 = $("<div class='trophie_1-1'>");
     container.append(trophie_1_1);
     trophie_1_1.css('left', trophie_1.PosX * 50);
@@ -169,6 +186,7 @@ $(function() {
         }
         //player dead================
         for (var i = 0; i < raftsTab.length; i++) {
+          // enigmatyczny if. Wartości stałe 0, 5, 10 dobrze jest przypisać do zmiennych, żeby była jasność co one oznaczają
           if (x !== raftsTab[i].PosX && y !== raftsTab[i].PosY && y !== 0 && y !== 5 && y !== 10) {
             player1.lifes = player1.lifes - 1;
             $('.lifes').text("Player lifes: " + player1.lifes);
@@ -203,6 +221,7 @@ $(function() {
         clearInterval(MoveToPlayer);
       }
 
+      //druga metoda, która robi to samo co checkPosition :(. Wystarczy przekazać playera jako argument funkcji checkPosition.
       checkPosition2(x, y) {
         for (var i = 0; i < raftsTab.length; i++) {
           if (x == raftsTab[i].PosX && y == raftsTab[i].PosY) {
@@ -266,7 +285,7 @@ $(function() {
     }
 
     var MoveToPlayer2 = "";
-
+    //to co wyżej, duplikacja kodu :(
     function movePlayer2(thisRaft) {
       clearInterval(MoveToPlayer2);
       MoveToPlayer2 = setInterval(() => {
@@ -279,6 +298,7 @@ $(function() {
 
     let player1 = new player("player1", 0);
     var playerLink = $("<div class='player1'>");
+    // tak samo jak w przypadku trophie zamknąłbym to w metodzie setPosition
     $('.container').append(playerLink);
     $('.player1').css('left', player1.PosX * 50);
     $('.player1').css('bottom', player1.PosY * 50);
@@ -315,6 +335,9 @@ $(function() {
 
     //Each raft create and put in HTML========
     // Line 1=================
+
+
+    // tak jak na przykładzie trophie zamknąłbym to wszystko w klasie. Zobacz na tym przykładzie ile kodu byś mógł usunąć :)
     var raft_1 = new rafts(6, 1, RaftSpeed1, ".tratwa_1-1", 0, 4);
     var raft_1_1 = $("<div class='tratwa_1-1'>");
     container.append(raft_1_1);
@@ -435,7 +458,7 @@ $(function() {
       raft_13, raft_14,
       raft_15, raft_16
     ]
-
+    //funkcja globalna, zamierzone ?
     Move = (speed, direction, element, MaxXLeft, MaxXRight) => {
       element.speed = speed;
       element.direction = direction;
@@ -460,7 +483,9 @@ $(function() {
         }
       }, speed)
     }
-
+    // Jak już chcesz tak robić, to Ładniej byłoby zrobić jakiegoś configa (tablicę) z tymi wszystkiemi paramatrami a następnie iterować po nim.
+    // Skoro speed definiujesz w klasie rafts, to MaxXLeft, MaxXRight też powinno się tam znaleźć i tedy mógłbyś
+    // iterować po tablicy raftsTab gdzie miałbyś wszystkie potrzebne dane
     // Line 1 rafts===================
     Move(raftsTab[0].speed, "left", raftsTab[0], 0, 6);
     Move(raftsTab[1].speed, "left", raftsTab[1], 4, 10);
@@ -516,7 +541,7 @@ $(function() {
     spider1.css('bottom', spider.PosY * 50);
 
     Move(spider.speed, "right", spider, 0, 10);
-
+    // ta funkcja jest zduplikowana i nie jest nigdzue wykorzystana :(
     let MoveMonster = setInterval(function() {
       for(var i=0; i<players.length; i++){
         if(spider.PosX == players[i].PosX && spider.PosY == players[i].PosY){
@@ -625,6 +650,9 @@ $(function() {
 //======================    MULTIPLAYER      ==================================
 //=============================================================================
 //=============================================================================
+
+// duplikacja ok 600 lini kodu jest nie do zaakceptowania :(
+// modyfikując lekkto powyższe metody, możesz je wykorzystać dla multiplayera bez konieczności duplikowania wszystkiego.
 
   function multiPlayer() {
 
@@ -1088,6 +1116,7 @@ $(function() {
 
     Move(spider.speed, "right", spider, 0, 10);
 
+    // ta funkcja jest zduplikowana i nie jest nigdzue wykorzystana :(
     let MoveMonster = setInterval(function() {
       for(var i=0; i<players.length; i++){
         if(spider.PosX == players[0].PosX && spider.PosY == players[0].PosY){
